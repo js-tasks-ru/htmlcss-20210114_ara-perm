@@ -1,4 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Ваше решение -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 02 | Semantic mockup</title>
+    <style>
+      /* simple style reset */
+      body,
+      h1,
+      h2 {
+        margin: 0;
+      }
+    </style>
+    <style>
+      :root {
+        --font-size-big: 32px;
+        --page-section-padding: 10px;
+      }
+
+      body {
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-section {
+        text-align: center;
+        padding: var(--page-section-padding);
+      }
+
+      .header {
+        background-color: red;
+        font-size: var(--font-size-big);
+      }
+
+      .navigation {
+        font-size: 20px;
+        background-color: orange;
+      }
+      .navigation__item {
+        color: white;
+      }
+      .navigation__item:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .articles {
+        flex: 1 0 auto;
+        text-align: left;
+        background-color: green;
+      }
+      .article {
+        background-color: blue;
+        padding: var(--page-section-padding);
+      }
+      .article + .article {
+        margin-top: 20px;
+      }
+
+      .footer {
+        background-color: purple;
+        font-size: var(--font-size-big);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-section header">Header</h1>
+      <nav class="page-section navigation">
+        <a class="navigation__item" href="#1">Navigation&nbsp;1</a>
+        <a class="navigation__item" href="#2">Navigation&nbsp;2</a>
+        <a class="navigation__item" href="#3">Navigation&nbsp;3</a>
+      </nav>
+    </header>
+    <main class="page-section articles">
+      <article class="article trilogies">
+        <h2 class="trilogies__header">Article 1</h2>
+        <ul class="trilogies__list">
+          <li class="trilogies__item">Оригинальная трилогия</li>
+          <li class="trilogies__item">Трилогия приквелов</li>
+          <li class="trilogies__item">Трилогия сиквелов</li>
+        </ul>
+      </article>
+      <article class="article movies">
+        <h2 class="movies__header">Article 2</h2>
+        <ol>
+          <li class="movies__item">Эпизод IV — Новая надежда</li>
+          <li class="movies__item">Эпизод V — Империя наносит ответный удар</li>
+          <li class="movies__item">Эпизод VI — Возвращение джедая</li>
+        </ol>
+      </article>
+    </main>
+    <footer class="page-section footer">Footer</footer>
+  </body>
 </html>
