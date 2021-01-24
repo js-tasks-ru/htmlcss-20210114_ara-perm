@@ -62,12 +62,17 @@ h2 {
   cursor: pointer;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+}
+
 .button:not(:last-child) {
   margin-right: var(--buttons-section-margin);
 }
 
 .button-primary {
   background-color: #4263eb;
+  transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
 }
 
 .button-primary:hover,
